@@ -145,8 +145,8 @@ class EventController extends Controller
  * @return type
  */
 	public function actionFilterEvents($choice = null) {
-		Yii::$app->reponse->format = \yii\web\Response::FORMAT_JSON;
-		$query = \models\Event::find();
+		Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+		$query = Event::find();
 
 		if( is_null($choice) || $choice=='all'){
 			$dbEvents = $query->all();
