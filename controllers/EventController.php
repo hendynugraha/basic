@@ -152,7 +152,7 @@ class EventController extends Controller
 			$dbEvents = $query->all();
 			$events = $this->loadEvents($dbEvents);
 		} else{
-			$dbEvents = $query->where(['=', 'column_name', ':choice'])
+			$dbEvents = $query->where(['=', 'title', ':choice'])
 					->params([':choice' => $choice])
 					->asArray()
 					->all();
